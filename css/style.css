@@ -1,0 +1,207 @@
+/*Your Code Here*/
+
+/*Write selector/rule property to add your border when
+links in the navigation are in the hover or focus state.*/
+nav a:hover, nav a:focus {
+     border: 2px dotted purple;
+}
+
+/*Write selector/rule property to position the default position for the skip class element*/
+.skip {
+     position: absolute;
+     z-index: 1000;
+     top: -65px;
+}
+
+/*Write selector/rule property to position the skip class element when it is in focus*/
+.skip:focus {
+     top: 25px;
+}
+
+/*Write selector/rule property to style all elements when in focus*/
+*:focus {
+     border: 5px dashed green;
+}
+
+
+/*Write selector/rule property to style the container */
+.container {
+     display: grid;
+     width: 100%;
+     grid-template-columns: repeat(5, 1fr);
+     gap: 13px;
+}
+
+/*Write selector/rule property to add the background image to the first div in the grid and place it in the grid. */
+.container > :first-child {
+     grid-column: 1 / -1;
+     width: 100%;
+     box-sizing: border-box;
+     background-image: url('../images/header.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+/* Steps 6 and 7: Write the selector/rule properties to  place the next five elements in the next
+ five rows in the grid. */
+
+      /*This will be a lot of rules.... but be strategic and combine selectors*/
+.accounts {
+     grid-column: 2 / span(3);
+     grid-row: 2;
+     height: fit-content;
+     align-self: center;
+}
+
+.onlinebanking {
+     grid-column: 2 / span(3);
+     grid-row: 3;
+     height: fit-content;
+     align-self: center;
+}
+
+.security {
+     grid-column: 2 / span(3);
+     grid-row: 4;
+     height: fit-content;
+     align-self: center;
+}
+
+.loans {
+     grid-column: 2 / span(3);
+     grid-row: 5;
+     height: fit-content;
+     align-self: center;
+}
+
+.contact {
+     grid-column: 2 / span(3);
+     grid-row: 6;
+     height: fit-content;
+     align-self: center;
+}
+
+ /* Step 8: Write the selector/rule property to style the .text-block class. */
+.accounts-image {
+     grid-column: 1 / -1;
+     grid-row: 2;
+     background-size: cover;
+     max-height: 675px;
+}
+
+.accounts-image img {
+     max-height: 675px;
+     width: auto;
+}
+
+.onlinebanking-image {
+     max-height: 675px;
+     grid-column: 1 / -1;
+     grid-row: 3;
+     background-size: cover;
+}
+
+.onlinebanking-image img {
+     max-height: 675px;
+     width: auto;
+}
+
+.security-image {
+     max-height: 675px;
+     grid-column: 1 / -1;
+     grid-row: 4;
+     background-size: cover;
+}
+
+.security-image img {
+     max-height: 675px;
+     width: auto;
+}
+
+.loans-image {
+     max-height: 675px;
+     grid-column: 1 / -1;
+     grid-row: 5;
+     background-size: cover;
+}
+
+.loans-image img {
+     max-height: 675px;
+     width: auto;
+}
+
+.contact-image {
+     max-height: 675px;
+     grid-column: 1 / -1;
+     grid-row: 6;
+     background-size: cover;
+}
+
+.contact-image img {
+     max-height: 675px;
+     width: auto;
+}
+
+.text-block {
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+} 
+
+.text-block ul, 
+.text-block ol {
+     text-align: left;
+}
+
+/* Add your media query here */
+@media (min-width: 825px) {
+
+  /* Step 10: Write the selector/rule property to style the nav element */
+     nav {
+          text-align: right;
+          padding: 35px, 0;
+     }
+ 
+  /* Step 11: Write the selector/rule property to update the .container class */
+     .container {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+     }    
+
+  /* Steps 12 - 15: Update the grid-column property of the grid's children (where-needed)*/
+  /* Steps 12 & 13 */
+     .accounts {
+          grid-column: 4 / span(3);
+          grid-row: 2;
+     }
+
+     .onlinebanking {
+          grid-column: 2 / span(3);
+          grid-row: 3;
+     }
+
+     .security {
+          grid-column: 4 / span(3);
+          grid-row: 4;
+     }
+
+     .loans {
+          grid-column: 2 / span(3);
+          grid-row: 5;
+     }
+
+     .contact {
+          grid-column: 4 / span(3);
+          grid-row: 6;
+     }
+
+  /* Steps 14 & 15 */
+
+
+
+ /* Step 16:Write the selector/rule property to update the .text-block class */
+     .text-block {
+          max-height: 235px;
+          overflow: auto;
+     }
+}
