@@ -91,6 +91,7 @@ nav a:hover, nav a:focus {
 .accounts-image img {
      width: 100%;
      height: auto;
+     display: block;
 }
 
 .onlinebanking-image {
@@ -103,6 +104,7 @@ nav a:hover, nav a:focus {
 .onlinebanking-image img {
      width: 100%;
      height: auto;
+     display: block;
 }
 
 .security-image {
@@ -115,6 +117,7 @@ nav a:hover, nav a:focus {
 .security-image img {
      width: 100%;
      height: auto;
+     display: block;
 }
 
 .loans-image {
@@ -126,8 +129,8 @@ nav a:hover, nav a:focus {
 
 .loans-image img {
      width: 100%;
-     object-fit: cover;
-     object-position: center;
+     height: auto;
+     display: block;
 }
 
 .contact-image {
@@ -140,6 +143,7 @@ nav a:hover, nav a:focus {
 .contact-image img {
      width: 100%;
      height: auto;
+     display: block;
 }
 
 .text-block {
@@ -198,10 +202,12 @@ nav a:hover, nav a:focus {
   /* Steps 14 & 15 */
      .accounts-image, .security-image, .contact-image {
           grid-column: 1 / span 5;
+          width: auto;
      }
 
      .onlinebanking-image, .loans-image {
           grid-column: 3 / span 5;
+          width: auto;
      }
 
 
